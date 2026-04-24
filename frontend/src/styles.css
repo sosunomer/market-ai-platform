@@ -1,0 +1,85 @@
+:root {
+  --bg: #0b1020;
+  --panel: #131a33;
+  --text: #e8ecf7;
+  --muted: #8892b0;
+  --accent: #4ea8ff;
+  --green: #22c55e;
+  --red: #ef4444;
+  --border: #22294a;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.nav .brand { font-weight: 700; letter-spacing: 0.3px; }
+.nav .links { display: flex; gap: 16px; align-items: center; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+button {
+  background: var(--accent);
+  color: #0b1020;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+input, select {
+  background: #0e1530;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.row { display: flex; gap: 16px; }
+.row > * { flex: 1; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.muted { color: var(--muted); font-size: 13px; }
+.pill { display: inline-block; padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; font-size: 12px; color: var(--muted); }
+.bull { color: var(--green); }
+.bear { color: var(--red); }
+.error { color: var(--red); }
+
+.instrument-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px;
+  background: #0e1530; margin-bottom: 6px;
+}
+.instrument-item:hover { border-color: var(--accent); }
+
+form { display: flex; flex-direction: column; gap: 10px; max-width: 360px; }
+form label { font-size: 13px; color: var(--muted); }
+
+pre { white-space: pre-wrap; background: #0e1530; padding: 12px; border-radius: 8px; border: 1px solid var(--border); }
