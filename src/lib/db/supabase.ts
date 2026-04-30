@@ -1,5 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 
+// Database tipi src/types/database.ts'de tanımlıdır.
+// Supabase projesine bağlandıktan sonra `supabase gen types typescript` ile
+// otomatik oluşturulan tipleri kullanabilirsiniz:
+//   import type { Database } from "@/types/database";
+//   createClient<Database>(...)
+
 /**
  * Supabase istemci tarafı istemcisi.
  * Tarayıcıda çalışan bileşenlerden güvenli okuma işlemleri için kullanılır.

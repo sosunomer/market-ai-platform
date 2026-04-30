@@ -2,6 +2,21 @@
 // Market AI Platform - TypeScript Type Definitions
 // =============================================================================
 
+// Veritabanı satır tiplerini re-export et
+export type {
+  Database,
+  UserRow,
+  PortfolioRow,
+  PortfolioStockRow,
+  WatchlistRow,
+  AlertRow,
+  NewsItemRow,
+  NewsStockImpactRow,
+  AIAnalysisRow,
+  UserPreferences,
+  AIFactorRow,
+} from "./database";
+
 // -----------------------------------------------------------------------------
 // User & Authentication
 // -----------------------------------------------------------------------------
